@@ -1,8 +1,9 @@
 use std::process::Command;
 use std::path::Path;
+use std::env;
 
 fn main() {
-    let sdrad_cdir = Path::new("./secure-rewind-and-discard/src");
+    let sdrad_dir = Path::new("./secure-rewind-and-discard/src");
     
     Command::new("sh")
             .arg("-c")
