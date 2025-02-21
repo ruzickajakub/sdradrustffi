@@ -7,12 +7,6 @@ fn main() {
     let output_prefix = env::var("OUT_DIR").unwrap();
     let libsdrad_path = Path::new(&output_prefix);
     let original_ld_library_path = env::var("LD_LIBRARY_PATH").unwrap_or_default();
-
-    Command::new("git")
-            .args(&["checkout", "sdrad_ffi"])
-            .current_dir("./secure-rewind-and-discard/")
-            .status()
-            .unwrap();
     
     Command::new("sh")
             .arg("-c")
